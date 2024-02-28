@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mariadb:11.2
+    environment:
+      MARIADB_ROOT_PASSWORD: foobarhogepiyo
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - 33306:3040
+  adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+
+volumes:
+  data:
